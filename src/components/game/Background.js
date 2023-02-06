@@ -30,7 +30,7 @@ const Background = (props) => {
   // func
   const setBackgroundMovement = () => {
     interval.current = setInterval(() => {
-      if (offSet == 1000-speed) {
+      if (offSet === 1000-speed) {
         setOffSet(0);
       } else {
         setOffSet(offSet + speed);

@@ -67,9 +67,6 @@ const ButtonIcon = styled.img`
 `
 
 const MainPage = () => {
-  const userId = useSelector(({ userId }) => ({
-    userId: userId,
-  }));
     
   return (
     <>

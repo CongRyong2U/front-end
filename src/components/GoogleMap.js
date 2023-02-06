@@ -34,14 +34,14 @@ function Map(props) {
   }, [])
 
   useEffect(() => {
-    axios.get("api/stage/list").then((response) => {
+    axios.get("https://ggg-server.herokuapp.com/api/stage/list").then((response) => {
       console.log(response.data.stageList)
       setLocations(response.data.stageList)
     })
   },[])
 
   useEffect(() => {
-    axios.get(`api/stage/detail/${stageId&&stageId&&stageId}`).then((response) => {
+    axios.get(`https://ggg-server.herokuapp.com/api/stage/detail/${stageId&&stageId&&stageId}`).then((response) => {
       console.log(response.data.stage)
       setPlace(response.data.stage)
     })

@@ -42,14 +42,14 @@ const MyPage = () => {
   const userId = useSelector((store) => store.userReducer.userId);
 
   useEffect(() => {
-  axios.get(`api/illust/detail/${illustId&&illustId}`).then((response) => {
+  axios.get(`https://ggg-server.herokuapp.com/api/illust/detail/${illustId&&illustId}`).then((response) => {
       //console.log(response.data.illust)
       setillust(response.data.illust)
   })
   },[illustId]);
 
   useEffect(() => {
-    axios.get("api/illust/list").then((response1) => {
+    axios.get("https://ggg-server.herokuapp.com/api/illust/list").then((response1) => {
       //console.log(response1.data.illustList)
       setList(response1.data.illustList)
     })
@@ -59,7 +59,7 @@ const MyPage = () => {
       let body = {
       _id: userId&&userId
     }
-    axios.post("api/users/collection", body).then((response2) => {
+    axios.post("https://ggg-server.herokuapp.com/api/users/collection", body).then((response2) => {
       //console.log(response2.data.collection)
       let illustList = response2.data.collection.illustList
       illustList = illustList.map(function(illust){ return illust._id; });
@@ -79,7 +79,7 @@ const MyPage = () => {
     let body = {
       _id: userId&&userId
     }
-    axios.post("api/users/info", body).then((response) => {
+    axios.post("https://ggg-server.herokuapp.com/api/users/info", body).then((response) => {
       //console.log(response.data.user)
       setInfo(response.data.user)
     })

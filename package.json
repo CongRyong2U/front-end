@@ -2,7 +2,6 @@
   "name": "cr2u-front",
   "version": "0.1.0",
   "private": true,
-  "proxy": "https://ggg-server.herokuapp.com/",
   "dependencies": {
     "@material-ui/core": "^4.12.4",
     "@react-google-maps/api": "^2.17.1",

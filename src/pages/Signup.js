@@ -88,7 +88,7 @@ const Signup = () => {
         password: password,
       };
   
-      axios.post("api/users/register", userInfo).then((response) => {
+      axios.post("https://ggg-server.herokuapp.com/api/users/register", userInfo).then((response) => {
         console.log(response);
         if (response.data.success) {
           // 회원가입 성공

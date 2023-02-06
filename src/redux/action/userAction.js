@@ -8,7 +8,7 @@ export async function loginUser(dataToSubmit) {
   //     console.log(response.data);
   //     return response.data;
   //   });
-  const request = await axios.post("/api/users/login", dataToSubmit);
+  const request = await axios.post("https://ggg-server.herokuapp.com/api/users/login", dataToSubmit);
   console.log(request);
   return {
     type: LOGIN_USER,
@@ -17,7 +17,7 @@ export async function loginUser(dataToSubmit) {
 }
 
 export function logoutUser() {
-  const data = axios.post("/api/users/logout");
+  const data = axios.post("https://ggg-server.herokuapp.com/api/users/logout");
 
   return {
     type: LOGOUT_USER,

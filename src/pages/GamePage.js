@@ -119,7 +119,7 @@ const GamePage = () => {
   
 
   useEffect(() => {
-    axios.get(`api/stage/detail/${stageId&&stageId}`).then((response) => {
+    axios.get(`https://ggg-server.herokuapp.com/api/stage/detail/${stageId&&stageId}`).then((response) => {
       console.log(response.data.stage)
       setPlace(response.data.stage)
     })

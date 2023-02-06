@@ -64,7 +64,7 @@ const SelectPage = () => {
   const [placesArray, setPlacesArray] = useState([]) //원본배열
 
   useEffect(() => {
-    axios.get("api/stage/list").then((response) => {
+    axios.get("https://ggg-server.herokuapp.com/api/stage/list").then((response) => {
       console.log(response.data.stageList)
       setPlaces(response.data.stageList)
       setPlacesArray(response.data.stageList)
@@ -72,7 +72,7 @@ const SelectPage = () => {
   },[])
 
   useEffect(() => {
-    axios.get(`api/stage/detail/${stageId&&stageId}`).then((response) => {
+    axios.get(`https://ggg-server.herokuapp.com/api/stage/detail/${stageId&&stageId}`).then((response) => {
       console.log(response.data.stage)
       setPlace(response.data.stage)
     })

@@ -37,7 +37,6 @@ const AuthWrapper = styled.div`
 `
 
 const NavPage = (props) => {
-  const type = props.type;
   const user = useSelector((store) => store.userReducer.userId);
     
   return (
